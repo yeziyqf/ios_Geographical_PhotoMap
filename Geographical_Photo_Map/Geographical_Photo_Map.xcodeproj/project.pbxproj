@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		034CAA1F20AE28B000DC9B23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CAA1E20AE28B000DC9B23 /* AppDelegate.m */; };
+		034CAA2220AE28B000DC9B23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CAA2120AE28B000DC9B23 /* ViewController.m */; };
+		034CAA2520AE28B000DC9B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034CAA2320AE28B000DC9B23 /* Main.storyboard */; };
+		034CAA2820AE28B000DC9B23 /* Geographical_Photo_Map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 034CAA2620AE28B000DC9B23 /* Geographical_Photo_Map.xcdatamodeld */; };
+		034CAA2A20AE28B000DC9B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034CAA2920AE28B000DC9B23 /* Assets.xcassets */; };
+		034CAA2D20AE28B000DC9B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034CAA2B20AE28B000DC9B23 /* LaunchScreen.storyboard */; };
+		034CAA3020AE28B000DC9B23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CAA2F20AE28B000DC9B23 /* main.m */; };
+		034CAA3A20AE28B000DC9B23 /* Geographical_Photo_MapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CAA3920AE28B000DC9B23 /* Geographical_Photo_MapTests.m */; };
+		034CAA4520AE28B000DC9B23 /* Geographical_Photo_MapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CAA4420AE28B000DC9B23 /* Geographical_Photo_MapUITests.m */; };
+		034CAA5420AE291400DC9B23 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034CAA5320AE291400DC9B23 /* MapKit.framework */; };
+		034CAA5620AE2F2000DC9B23 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034CAA5520AE2F2000DC9B23 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		034CAA3620AE28B000DC9B23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 034CAA1220AE28B000DC9B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 034CAA1920AE28B000DC9B23;
+			remoteInfo = Geographical_Photo_Map;
+		};
+		034CAA4120AE28B000DC9B23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 034CAA1220AE28B000DC9B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 034CAA1920AE28B000DC9B23;
+			remoteInfo = Geographical_Photo_Map;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		034CAA1A20AE28B000DC9B23 /* Geographical_Photo_Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geographical_Photo_Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		034CAA1D20AE28B000DC9B23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		034CAA1E20AE28B000DC9B23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		034CAA2020AE28B000DC9B23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		034CAA2120AE28B000DC9B23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		034CAA2420AE28B000DC9B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		034CAA2720AE28B000DC9B23 /* Geographical_Photo_Map.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Geographical_Photo_Map.xcdatamodel; sourceTree = "<group>"; };
+		034CAA2920AE28B000DC9B23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		034CAA2C20AE28B000DC9B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		034CAA2E20AE28B000DC9B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		034CAA2F20AE28B000DC9B23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		034CAA3520AE28B000DC9B23 /* Geographical_Photo_MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Geographical_Photo_MapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		034CAA3920AE28B000DC9B23 /* Geographical_Photo_MapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Geographical_Photo_MapTests.m; sourceTree = "<group>"; };
+		034CAA3B20AE28B000DC9B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		034CAA4020AE28B000DC9B23 /* Geographical_Photo_MapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Geographical_Photo_MapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		034CAA4420AE28B000DC9B23 /* Geographical_Photo_MapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Geographical_Photo_MapUITests.m; sourceTree = "<group>"; };
+		034CAA4620AE28B000DC9B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		034CAA5320AE291400DC9B23 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		034CAA5520AE2F2000DC9B23 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		034CAA1720AE28B000DC9B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034CAA5620AE2F2000DC9B23 /* CoreLocation.framework in Frameworks */,
+				034CAA5420AE291400DC9B23 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034CAA3220AE28B000DC9B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034CAA3D20AE28B000DC9B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034CAA1120AE28B000DC9B23 = {
+			isa = PBXGroup;
+			children = (
+				034CAA1C20AE28B000DC9B23 /* Geographical_Photo_Map */,
+				034CAA3820AE28B000DC9B23 /* Geographical_Photo_MapTests */,
+				034CAA4320AE28B000DC9B23 /* Geographical_Photo_MapUITests */,
+				034CAA1B20AE28B000DC9B23 /* Products */,
+				034CAA5220AE291400DC9B23 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		034CAA1B20AE28B000DC9B23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				034CAA1A20AE28B000DC9B23 /* Geographical_Photo_Map.app */,
+				034CAA3520AE28B000DC9B23 /* Geographical_Photo_MapTests.xctest */,
+				034CAA4020AE28B000DC9B23 /* Geographical_Photo_MapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		034CAA1C20AE28B000DC9B23 /* Geographical_Photo_Map */ = {
+			isa = PBXGroup;
+			children = (
+				034CAA1D20AE28B000DC9B23 /* AppDelegate.h */,
+				034CAA1E20AE28B000DC9B23 /* AppDelegate.m */,
+				034CAA2020AE28B000DC9B23 /* ViewController.h */,
+				034CAA2120AE28B000DC9B23 /* ViewController.m */,
+				034CAA2320AE28B000DC9B23 /* Main.storyboard */,
+				034CAA2920AE28B000DC9B23 /* Assets.xcassets */,
+				034CAA2B20AE28B000DC9B23 /* LaunchScreen.storyboard */,
+				034CAA2E20AE28B000DC9B23 /* Info.plist */,
+				034CAA2F20AE28B000DC9B23 /* main.m */,
+				034CAA2620AE28B000DC9B23 /* Geographical_Photo_Map.xcdatamodeld */,
+			);
+			path = Geographical_Photo_Map;
+			sourceTree = "<group>";
+		};
+		034CAA3820AE28B000DC9B23 /* Geographical_Photo_MapTests */ = {
+			isa = PBXGroup;
+			children = (
+				034CAA3920AE28B000DC9B23 /* Geographical_Photo_MapTests.m */,
+				034CAA3B20AE28B000DC9B23 /* Info.plist */,
+			);
+			path = Geographical_Photo_MapTests;
+			sourceTree = "<group>";
+		};
+		034CAA4320AE28B000DC9B23 /* Geographical_Photo_MapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				034CAA4420AE28B000DC9B23 /* Geographical_Photo_MapUITests.m */,
+				034CAA4620AE28B000DC9B23 /* Info.plist */,
+			);
+			path = Geographical_Photo_MapUITests;
+			sourceTree = "<group>";
+		};
+		034CAA5220AE291400DC9B23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				034CAA5520AE2F2000DC9B23 /* CoreLocation.framework */,
+				034CAA5320AE291400DC9B23 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		034CAA1920AE28B000DC9B23 /* Geographical_Photo_Map */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 034CAA4920AE28B000DC9B23 /* Build configuration list for PBXNativeTarget "Geographical_Photo_Map" */;
+			buildPhases = (
+				034CAA1620AE28B000DC9B23 /* Sources */,
+				034CAA1720AE28B000DC9B23 /* Frameworks */,
+				034CAA1820AE28B000DC9B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Geographical_Photo_Map;
+			productName = Geographical_Photo_Map;
+			productReference = 034CAA1A20AE28B000DC9B23 /* Geographical_Photo_Map.app */;
+			productType = "com.apple.product-type.application";
+		};
+		034CAA3420AE28B000DC9B23 /* Geographical_Photo_MapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 034CAA4C20AE28B000DC9B23 /* Build configuration list for PBXNativeTarget "Geographical_Photo_MapTests" */;
+			buildPhases = (
+				034CAA3120AE28B000DC9B23 /* Sources */,
+				034CAA3220AE28B000DC9B23 /* Frameworks */,
+				034CAA3320AE28B000DC9B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				034CAA3720AE28B000DC9B23 /* PBXTargetDependency */,
+			);
+			name = Geographical_Photo_MapTests;
+			productName = Geographical_Photo_MapTests;
+			productReference = 034CAA3520AE28B000DC9B23 /* Geographical_Photo_MapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		034CAA3F20AE28B000DC9B23 /* Geographical_Photo_MapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 034CAA4F20AE28B000DC9B23 /* Build configuration list for PBXNativeTarget "Geographical_Photo_MapUITests" */;
+			buildPhases = (
+				034CAA3C20AE28B000DC9B23 /* Sources */,
+				034CAA3D20AE28B000DC9B23 /* Frameworks */,
+				034CAA3E20AE28B000DC9B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				034CAA4220AE28B000DC9B23 /* PBXTargetDependency */,
+			);
+			name = Geographical_Photo_MapUITests;
+			productName = Geographical_Photo_MapUITests;
+			productReference = 034CAA4020AE28B000DC9B23 /* Geographical_Photo_MapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		034CAA1220AE28B000DC9B23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = qye;
+				TargetAttributes = {
+					034CAA1920AE28B000DC9B23 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					034CAA3420AE28B000DC9B23 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 034CAA1920AE28B000DC9B23;
+					};
+					034CAA3F20AE28B000DC9B23 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 034CAA1920AE28B000DC9B23;
+					};
+				};
+			};
+			buildConfigurationList = 034CAA1520AE28B000DC9B23 /* Build configuration list for PBXProject "Geographical_Photo_Map" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 034CAA1120AE28B000DC9B23;
+			productRefGroup = 034CAA1B20AE28B000DC9B23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				034CAA1920AE28B000DC9B23 /* Geographical_Photo_Map */,
+				034CAA3420AE28B000DC9B23 /* Geographical_Photo_MapTests */,
+				034CAA3F20AE28B000DC9B23 /* Geographical_Photo_MapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		034CAA1820AE28B000DC9B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034CAA2D20AE28B000DC9B23 /* LaunchScreen.storyboard in Resources */,
+				034CAA2A20AE28B000DC9B23 /* Assets.xcassets in Resources */,
+				034CAA2520AE28B000DC9B23 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034CAA3320AE28B000DC9B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034CAA3E20AE28B000DC9B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		034CAA1620AE28B000DC9B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034CAA2820AE28B000DC9B23 /* Geographical_Photo_Map.xcdatamodeld in Sources */,
+				034CAA2220AE28B000DC9B23 /* ViewController.m in Sources */,
+				034CAA3020AE28B000DC9B23 /* main.m in Sources */,
+				034CAA1F20AE28B000DC9B23 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034CAA3120AE28B000DC9B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034CAA3A20AE28B000DC9B23 /* Geographical_Photo_MapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034CAA3C20AE28B000DC9B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034CAA4520AE28B000DC9B23 /* Geographical_Photo_MapUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		034CAA3720AE28B000DC9B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 034CAA1920AE28B000DC9B23 /* Geographical_Photo_Map */;
+			targetProxy = 034CAA3620AE28B000DC9B23 /* PBXContainerItemProxy */;
+		};
+		034CAA4220AE28B000DC9B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 034CAA1920AE28B000DC9B23 /* Geographical_Photo_Map */;
+			targetProxy = 034CAA4120AE28B000DC9B23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		034CAA2320AE28B000DC9B23 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				034CAA2420AE28B000DC9B23 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		034CAA2B20AE28B000DC9B23 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				034CAA2C20AE28B000DC9B23 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		034CAA4720AE28B000DC9B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		034CAA4820AE28B000DC9B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		034CAA4A20AE28B000DC9B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9FUT782B8;
+				INFOPLIST_FILE = Geographical_Photo_Map/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qye.Geographical-Photo-Map";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		034CAA4B20AE28B000DC9B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9FUT782B8;
+				INFOPLIST_FILE = Geographical_Photo_Map/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qye.Geographical-Photo-Map";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		034CAA4D20AE28B000DC9B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Geographical_Photo_MapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qye.Geographical-Photo-MapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Geographical_Photo_Map.app/Geographical_Photo_Map";
+			};
+			name = Debug;
+		};
+		034CAA4E20AE28B000DC9B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Geographical_Photo_MapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qye.Geographical-Photo-MapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Geographical_Photo_Map.app/Geographical_Photo_Map";
+			};
+			name = Release;
+		};
+		034CAA5020AE28B000DC9B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Geographical_Photo_MapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qye.Geographical-Photo-MapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Geographical_Photo_Map;
+			};
+			name = Debug;
+		};
+		034CAA5120AE28B000DC9B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Geographical_Photo_MapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qye.Geographical-Photo-MapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Geographical_Photo_Map;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		034CAA1520AE28B000DC9B23 /* Build configuration list for PBXProject "Geographical_Photo_Map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034CAA4720AE28B000DC9B23 /* Debug */,
+				034CAA4820AE28B000DC9B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		034CAA4920AE28B000DC9B23 /* Build configuration list for PBXNativeTarget "Geographical_Photo_Map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034CAA4A20AE28B000DC9B23 /* Debug */,
+				034CAA4B20AE28B000DC9B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		034CAA4C20AE28B000DC9B23 /* Build configuration list for PBXNativeTarget "Geographical_Photo_MapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034CAA4D20AE28B000DC9B23 /* Debug */,
+				034CAA4E20AE28B000DC9B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		034CAA4F20AE28B000DC9B23 /* Build configuration list for PBXNativeTarget "Geographical_Photo_MapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034CAA5020AE28B000DC9B23 /* Debug */,
+				034CAA5120AE28B000DC9B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		034CAA2620AE28B000DC9B23 /* Geographical_Photo_Map.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				034CAA2720AE28B000DC9B23 /* Geographical_Photo_Map.xcdatamodel */,
+			);
+			currentVersion = 034CAA2720AE28B000DC9B23 /* Geographical_Photo_Map.xcdatamodel */;
+			path = Geographical_Photo_Map.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 034CAA1220AE28B000DC9B23 /* Project object */;
+}
