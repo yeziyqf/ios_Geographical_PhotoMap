@@ -17,6 +17,8 @@
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -28,7 +30,7 @@
     [[self locationManager] setDelegate:self];
     
     
-    // we have to setup the location manager with permission in later iOS versions
+    // Need to setup the location manager with permission in iOS versions later than ios8.
     if ([[self locationManager] respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [[self locationManager] requestWhenInUseAuthorization];
     }
