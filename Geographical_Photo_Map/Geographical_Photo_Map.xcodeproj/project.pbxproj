@@ -18,6 +18,7 @@
 		034CAA4520AE28B000DC9B23 /* Geographical_Photo_MapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CAA4420AE28B000DC9B23 /* Geographical_Photo_MapUITests.m */; };
 		034CAA5420AE291400DC9B23 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034CAA5320AE291400DC9B23 /* MapKit.framework */; };
 		034CAA5620AE2F2000DC9B23 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034CAA5520AE2F2000DC9B23 /* CoreLocation.framework */; };
+		03C657D720B77C0B007E18EB /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C657D620B77C0B007E18EB /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		034CAA4620AE28B000DC9B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		034CAA5320AE291400DC9B23 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		034CAA5520AE2F2000DC9B23 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		03C657D620B77C0B007E18EB /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C657D720B77C0B007E18EB /* AddressBookUI.framework in Frameworks */,
 				034CAA5620AE2F2000DC9B23 /* CoreLocation.framework in Frameworks */,
 				034CAA5420AE291400DC9B23 /* MapKit.framework in Frameworks */,
 			);
@@ -145,6 +148,7 @@
 		034CAA5220AE291400DC9B23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03C657D620B77C0B007E18EB /* AddressBookUI.framework */,
 				034CAA5520AE2F2000DC9B23 /* CoreLocation.framework */,
 				034CAA5320AE291400DC9B23 /* MapKit.framework */,
 			);

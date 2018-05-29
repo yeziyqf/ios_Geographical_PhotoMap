@@ -19,6 +19,12 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+// For geocoding
+@property (weak, nonatomic) IBOutlet UITextField *customTextField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UILabel *searchResult;
+@property CLLocationCoordinate2D coords;
 
 @end
+
 
