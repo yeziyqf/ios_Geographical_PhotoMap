@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <Contacts/Contacts.h>
 
 @interface ViewController : UIViewController
 
@@ -24,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UILabel *searchResult;
 @property CLLocationCoordinate2D coords;
+@property (weak, nonatomic) IBOutlet UIButton *ReverseGeoButton;
+@property (weak, nonatomic) IBOutlet UILabel *ReverseResult;
 
 @end
 

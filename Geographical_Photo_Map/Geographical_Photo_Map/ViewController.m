@@ -92,8 +92,51 @@
     }
     //Drop pin on map
     [self.mapView addAnnotation:point];
-
 }
+
+- (IBAction)ReverseGroButtonTouched:(id)sender{
+    CLLocation *newlocation = [[CLLocation alloc]
+                               initWithLatitude:self.labelLatitude.text.doubleValue longitude:self.labelLongitude.text.doubleValue];
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:newlocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Geocode failed with error: %@", error);
+            return;
+        }
+        if (placemarks && placemarks.count > 0) {
+            CLPlacemark *placemark = placemarks[0];
+            CLLocation *location = placemark.location;
+            
+            // For ios 9 and later, use CNPostalAddress instead.
+            // Extract address information
+            NSLog(@"Found %@", placemark.name);
+            NSString *placeName = placemark.name;
+            NSString *city = placemark.locality;
+            NSString *AdminArea = placemark.administrativeArea;
+            NSString *postalCode = placemark.postalCode;
+            NSString *country = placemark.country;
+//            NSDictionary *addressDict = @{
+//                                          CNPostalAddressStreetKey : location.street,
+//                                          CNPostalAddressCityKey : location.city,
+//                                          CNPostalAddressStateKey : location.state,
+//                                          CNPostalAddressPostalCodeKey : location.zip,
+//                                          CNPostalAddressCountryKey : location.country,
+//                                          CNPostalAddressISOCountryCodeKey : location.countryCode
+//                                          };
+            
+            // Before ios 9.
+            //NSDictionary *addressDictionary = placemark.addressDictionary;
+            //NSString *address = [addressDictionary objectForKey:(NSString *) kABPersonAddressStreetKey];
+            //NSString *city = [addressDictionary objectForKey:(NSString *) kABPersonAddressCityKey];
+            //NSString *state = [addressDictionary objectForKey:(NSString *) kABPersonAddressStateKey];
+            
+            // Show result on the label.
+//            self.ReverseResult.text = [NSString localizedStringWithFormat:placeName];
+            self.ReverseResult.text = [NSString stringWithFormat:@"%@ %@ %@ %@ %@",placeName, city, AdminArea, postalCode, country];
+        }
+    }];
+}
+
 
 // Touch other place in the screen to dismiss the input keyboard.
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
