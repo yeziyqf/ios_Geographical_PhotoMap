@@ -27,6 +27,7 @@
 @property CLLocationCoordinate2D coords;
 @property (weak, nonatomic) IBOutlet UIButton *ReverseGeoButton;
 @property (weak, nonatomic) IBOutlet UILabel *ReverseResult;
+@property (weak, nonatomic) IBOutlet UIButton *imageUploadButton;
 
 @end
 

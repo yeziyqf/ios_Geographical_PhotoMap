@@ -58,6 +58,10 @@
 		034CAA4620AE28B000DC9B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		034CAA5320AE291400DC9B23 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		034CAA5520AE2F2000DC9B23 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0360B8B8210012BC00B7E822 /* JFRSecurity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFRSecurity.m; sourceTree = "<group>"; };
+		0360B8B9210012BD00B7E822 /* JFRWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFRWebSocket.h; sourceTree = "<group>"; };
+		0360B8BA210012BD00B7E822 /* JFRWebSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFRWebSocket.m; sourceTree = "<group>"; };
+		0360B8BB210012BD00B7E822 /* JFRSecurity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFRSecurity.h; sourceTree = "<group>"; };
 		03C657D620B77C0B007E18EB /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -92,6 +96,7 @@
 		034CAA1120AE28B000DC9B23 = {
 			isa = PBXGroup;
 			children = (
+				0360B8B7210012AB00B7E822 /* Jetfire_websocket */,
 				034CAA1C20AE28B000DC9B23 /* Geographical_Photo_Map */,
 				034CAA3820AE28B000DC9B23 /* Geographical_Photo_MapTests */,
 				034CAA4320AE28B000DC9B23 /* Geographical_Photo_MapUITests */,
@@ -153,6 +158,17 @@
 				034CAA5320AE291400DC9B23 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0360B8B7210012AB00B7E822 /* Jetfire_websocket */ = {
+			isa = PBXGroup;
+			children = (
+				0360B8BB210012BD00B7E822 /* JFRSecurity.h */,
+				0360B8B8210012BC00B7E822 /* JFRSecurity.m */,
+				0360B8B9210012BD00B7E822 /* JFRWebSocket.h */,
+				0360B8BA210012BD00B7E822 /* JFRWebSocket.m */,
+			);
+			path = Jetfire_websocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

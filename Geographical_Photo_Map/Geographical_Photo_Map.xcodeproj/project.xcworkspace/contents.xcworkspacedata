@@ -2,15 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/qye/Documents/project_folder/Geographical_Photo_Map/Geographical_Photo_Map/MDSGeocodingViewController.h">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/qye/Documents/project_folder/Geographical_Photo_Map/Geographical_Photo_Map/MDSGeocodingViewController.m">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/qye/Documents/project_folder/Geographical_Photo_Map/Geographical_Photo_Map/MDSGeocodingViewController.xib">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

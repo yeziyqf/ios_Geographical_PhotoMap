@@ -9,9 +9,16 @@
 #define METERS_FEET 3.28084
 
 #import "ViewController.h"
+#import "../Jetfire_websocket/JFRWebSocket.h"
 
 @interface ViewController ()
 <CLLocationManagerDelegate>
+
+@end
+
+@interface ViewController ()<JFRWebSocketDelegate>
+
+@property(nonatomic, strong)JFRWebSocket *socket;
 
 @end
 
@@ -41,6 +48,11 @@
     // Geocoding
     self.searchResult.text = @"default text";
     [self.searchButton setTitle:@"Search Location Name" forState:(UIControlStateNormal)];
+    
+    // websocket connection initialization.
+    self.socket = [[JFRWebSocket alloc] initWithURL:[NSURL URLWithString:@"ws://localhost:9002"] protocols:@[@"chat",@"superchat"]];
+    self.socket.delegate = self;
+    [self.socket connect];
 }
 
 
@@ -142,4 +154,57 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.customTextField resignFirstResponder];
 }
+
+- (IBAction)UploadButtonClicked:(id)sender {
+    NSString *strFName = @"nathan";
+    NSString *strLName = @"Yosemite_GlacierPoint";
+    NSString *SHA256 = @"3a6de1888650ee3a614d91017b30ca6976af13ec8adeebaf63e286fdf09178dd";
+    
+    NSString *strKeyFN = @"unique_image_name";
+    NSString *strKeyLN = @"user_name";
+    NSString *numValue = @"SHA256";
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    
+    [dic setObject:strFName forKey:strKeyFN];
+    [dic setObject:strLName forKey:strKeyLN];
+    [dic setObject:[NSNumber numberWithInt:SHA256] forKey:numValue];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[NSArray arrayWithObject:dic] options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSLog(@"JSON  %@",jsonString);
+    
+    //[self.socket writeString:@""];
+    [self.socket writeString:jsonString];
+}
+
+- (IBAction)disconnect:(UIBarButtonItem *)sender {
+    if(self.socket.isConnected) {
+        sender.title = @"Connect";
+        [self.socket disconnect];
+    } else {
+        sender.title = @"Disconnect";
+        [self.socket connect];
+    }
+}
+
+// pragma mark: WebSocket Delegate methods.
+
+-(void)websocketDidConnect:(JFRWebSocket*)socket {
+    NSLog(@"websocket is connected");
+}
+
+-(void)websocketDidDisconnect:(JFRWebSocket*)socket error:(NSError*)error {
+    NSLog(@"websocket is disconnected: %@", [error localizedDescription]);
+    [self.socket connect];
+}
+
+-(void)websocket:(JFRWebSocket*)socket didReceiveMessage:(NSString*)string {
+    NSLog(@"Received text: %@", string);
+}
+
+-(void)websocket:(JFRWebSocket*)socket didReceiveData:(NSData*)data {
+    NSLog(@"Received data: %@", data);
+}
+
+// pragma mark: target actions.
+
 @end

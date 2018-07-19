@@ -122,6 +122,14 @@
                                     <action selector="ReverseGroButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aUV-m4-fID"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ope-Vw-avJ">
+                                <rect key="frame" x="310" y="120" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="UploadButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="br8-bv-GAw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -131,6 +139,7 @@
                         <outlet property="ReverseGeoButton" destination="w4a-um-OsN" id="QZa-2m-SUp"/>
                         <outlet property="ReverseResult" destination="4Pb-yB-5hI" id="9Zz-CW-Oiv"/>
                         <outlet property="customTextField" destination="jcJ-jv-f8P" id="fZI-GQ-eQP"/>
+                        <outlet property="imageUploadButton" destination="ope-Vw-avJ" id="R6E-JU-IeN"/>
                         <outlet property="labelAltitude" destination="5Od-6i-MWA" id="BI9-ta-XSC"/>
                         <outlet property="labelLatitude" destination="kNy-es-q0Z" id="pMT-si-ZA2"/>
                         <outlet property="labelLongitude" destination="Lnv-zJ-jAB" id="lR7-sv-0aJ"/>
