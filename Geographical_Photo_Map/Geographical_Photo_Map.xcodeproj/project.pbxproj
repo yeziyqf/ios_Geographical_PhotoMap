@@ -18,6 +18,8 @@
 		034CAA4520AE28B000DC9B23 /* Geographical_Photo_MapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CAA4420AE28B000DC9B23 /* Geographical_Photo_MapUITests.m */; };
 		034CAA5420AE291400DC9B23 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034CAA5320AE291400DC9B23 /* MapKit.framework */; };
 		034CAA5620AE2F2000DC9B23 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034CAA5520AE2F2000DC9B23 /* CoreLocation.framework */; };
+		0360B8BC21001F1300B7E822 /* JFRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0360B8BA210012BD00B7E822 /* JFRWebSocket.m */; };
+		0360B8BD21001F1B00B7E822 /* JFRSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0360B8B8210012BC00B7E822 /* JFRSecurity.m */; };
 		03C657D720B77C0B007E18EB /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C657D620B77C0B007E18EB /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -309,7 +311,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0360B8BC21001F1300B7E822 /* JFRWebSocket.m in Sources */,
 				034CAA2820AE28B000DC9B23 /* Geographical_Photo_Map.xcdatamodeld in Sources */,
+				0360B8BD21001F1B00B7E822 /* JFRSecurity.m in Sources */,
 				034CAA2220AE28B000DC9B23 /* ViewController.m in Sources */,
 				034CAA3020AE28B000DC9B23 /* main.m in Sources */,
 				034CAA1F20AE28B000DC9B23 /* AppDelegate.m in Sources */,
@@ -480,6 +484,7 @@
 				INFOPLIST_FILE = Geographical_Photo_Map/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "qye.Geographical-Photo-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -495,6 +500,7 @@
 				INFOPLIST_FILE = Geographical_Photo_Map/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "qye.Geographical-Photo-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
