@@ -10,6 +10,8 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <Contacts/Contacts.h>
+#import <FirebaseDatabase.h>
+#import <FirebaseStorage.h>
 
 @interface ViewController : UIViewController
 
@@ -28,6 +30,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *ReverseGeoButton;
 @property (weak, nonatomic) IBOutlet UILabel *ReverseResult;
 @property (weak, nonatomic) IBOutlet UIButton *imageUploadButton;
+
+// Firebase
+@property (strong, nonatomic) FIRDatabaseReference *ref;
+
 
 @end
 

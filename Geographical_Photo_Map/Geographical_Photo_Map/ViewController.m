@@ -13,7 +13,6 @@
 
 @interface ViewController ()
 <CLLocationManagerDelegate>
-
 @end
 
 @interface ViewController ()<JFRWebSocketDelegate>
@@ -23,8 +22,6 @@
 @end
 
 @implementation ViewController
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,6 +50,9 @@
     self.socket = [[JFRWebSocket alloc] initWithURL:[NSURL URLWithString:@"ws://localhost:9002"] protocols:@[@"chat",@"superchat"]];
     self.socket.delegate = self;
     [self.socket connect];
+    
+    // Firebase initialization.
+    self.ref = [[FIRDatabase database] reference];
 }
 
 
@@ -155,19 +155,101 @@
     [self.customTextField resignFirstResponder];
 }
 
+// This method is called when an image has been chosen from the library or taken from the camera.
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    //You can retrieve the actual UIImage
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    //Or you can get the image url from AssetsLibrary
+    NSURL *path = [info valueForKey:UIImagePickerControllerReferenceURL];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"finish choosing image.");
+    
+    // Upload to firebase
+    // Local file you want to upload
+    //NSURL *localFile = [NSURL URLWithString: path];
+    NSURL *localFile = path;
+    
+    // Create the file metadata
+    FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
+    metadata.contentType = @"image/jpeg";
+    
+    // Get a reference to the storage service using the default Firebase App
+    FIRStorage *storage = [FIRStorage storage];
+    
+    // Create a storage reference from our storage service
+    FIRStorageReference *storageRef = [storage reference];
+    
+    // Upload file and metadata to the object 'images/mountains.jpg'
+    FIRStorageUploadTask *uploadTask = [storageRef putFile:localFile metadata:metadata];
+    
+    // Listen for state changes, errors, and completion of the upload.
+    [uploadTask observeStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot *snapshot) {
+        // Upload resumed, also fires when the upload starts
+    }];
+    
+    [uploadTask observeStatus:FIRStorageTaskStatusPause handler:^(FIRStorageTaskSnapshot *snapshot) {
+        // Upload paused
+    }];
+    
+    [uploadTask observeStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot) {
+        // Upload reported progress
+        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / (snapshot.progress.totalUnitCount);
+    }];
+    
+    [uploadTask observeStatus:FIRStorageTaskStatusSuccess handler:^(FIRStorageTaskSnapshot *snapshot) {
+        // Upload completed successfully
+    }];
+
+    // Errors only occur in the "Failure" case
+    [uploadTask observeStatus:FIRStorageTaskStatusFailure handler:^(FIRStorageTaskSnapshot *snapshot) {
+        if (snapshot.error != nil) {
+            switch (snapshot.error.code) {
+                case FIRStorageErrorCodeObjectNotFound:
+                    // File doesn't exist
+                    break;
+                    
+                case FIRStorageErrorCodeUnauthorized:
+                    // User doesn't have permission to access file
+                    break;
+                    
+                case FIRStorageErrorCodeCancelled:
+                    // User canceled the upload
+                    break;
+                    
+                    /* ... */
+                    
+                case FIRStorageErrorCodeUnknown:
+                    // Unknown error occurred, inspect the server response
+                    break;
+            }
+        }
+    }];
+}
+
 - (IBAction)UploadButtonClicked:(id)sender {
+    // Choose from photo library.
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.delegate = self;
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+    
+
+    
+    // Construct the json vector to be sent to server.
     NSString *strFName = @"nathan";
-    NSString *strLName = @"Yosemite_GlacierPoint";
+    NSString *strLName = @"YOSEMITE";
     NSString *SHA256 = @"3a6de1888650ee3a614d91017b30ca6976af13ec8adeebaf63e286fdf09178dd";
     
     NSString *strKeyFN = @"unique_image_name";
     NSString *strKeyLN = @"user_name";
-    NSString *numValue = @"SHA256";
+    NSString *imgVector = @"SHA256";
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     
-    [dic setObject:strFName forKey:strKeyFN];
-    [dic setObject:strLName forKey:strKeyLN];
-    [dic setObject:[NSNumber numberWithInt:SHA256] forKey:numValue];
+    [dic setObject:strLName forKey:strKeyFN];
+    [dic setObject:strFName forKey:strKeyLN];
+    [dic setObject:SHA256 forKey:imgVector];
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[NSArray arrayWithObject:dic] options:NSJSONWritingPrettyPrinted error:nil];
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     NSLog(@"JSON  %@",jsonString);
